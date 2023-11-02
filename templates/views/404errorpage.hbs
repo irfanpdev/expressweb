@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{>linkheader}}
+    <title>Weather Application-Home</title>
+  </head>
+  <body>
+<div class="container-fluid main_menu">
+<div class="row">
+  <div class="col-md-10 col-12 mx-auto">
+    <!--nav bar header -->
+    {{>nav}}
+    <!--end of  bar header -->
+  </div>
+</div>
+</div>
+    <!--mian header -->
+   
+    <div class="container-fluid main_header">
+      <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+
+          <div class="row">
+            <!-- left side div -->
+            <div class="col-md-12 col-12 main_header_left align-items-center">
+              <figure class"errormsg">
+                <img src="images/404error.jpg" alt="weatherapp" class="image-fluid">
+                
+              </figure>
+              
+           
+             
+            <!--end of left side div -->
+
+          <!--right side div -->
+         
+            <p>Welcome to Weather Applition</p>
+              <h1><span class="spn_clr"> {{errmsg}}</span></h1>
+              <a href="/"> <button>GO Back</button></a>
+          </div>
+            <!--end of right side div -->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </body>
+  {{>footer}}
+</html>
