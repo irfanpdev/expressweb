@@ -22,12 +22,12 @@ const getinfo = async (event) => {
   event.preventDefault();
   let cityval = cityname.value;
   if (cityval == "") {
-    city_name.innerText = "Please provide valid city name";
+    city_name.innerText = "Please provide a valid city name";
     datahide.classList.add('data_hide');
   } else {
     try {
-      let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=03479cccfa915aa469df8a451050f1cb`;
-      const respone = await fetch(url);
+      let apiurl = `http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=03479cccfa915aa469df8a451050f1cb`;
+      const respone = await fetch(apiurl);
       const jsondata = await respone.json();
       const arrdata = [jsondata];
 
@@ -54,7 +54,7 @@ const getinfo = async (event) => {
       datahide.classList.remove('data_hide');
 
     } catch {
-      city_name.innerText = "Please provide valid city name";
+      city_name.innerText = ` "${cityval}" is not a valid city name`;
       datahide.classList.add('data_hide');
     }
   }
