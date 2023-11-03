@@ -31,7 +31,7 @@ const getinfo = async (event) => {
       const jsondata = await respone.json();
       const arrdata = [jsondata];
 
-       
+       alert(apiurl);
       city_name.innerText=`${arrdata[0].name}, ${arrdata[0].sys.country}`
       temprature.innerText=arrdata[0].main.temp;
      /// temp_status.innerText=arrdata[0].weather[0].main;
