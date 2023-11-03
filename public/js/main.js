@@ -17,7 +17,7 @@ let month = dtarr[1];
 let hrmin=dateObject.toLocaleString('en-in',{hour: 'numeric', minute:'numeric'});
 let dthr= `${day} ${month} ${date} | ${hrmin} `
 dayname.innerText=`${day}`;
-today_date.innerText= `${date} ${month}`
+today_date.innerText= `${date} ${month} | ${hrmin}`
 const getinfo = async (event) => {
   event.preventDefault();
   let cityval = cityname.value;
