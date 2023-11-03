@@ -21,7 +21,7 @@ today_date.innerText= `${date} ${month}`
 const getinfo = async (event) => {
   event.preventDefault();
   let cityval = cityname.value;
-  if (cityval === "") {
+  if (cityval == "") {
     city_name.innerText = "Please provide valid city name";
     datahide.classList.add('data_hide');
   } else {
